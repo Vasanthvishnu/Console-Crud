@@ -41,7 +41,7 @@ namespace VehicleDataAccessLayer
         {
             try
             {
-                var update = ($"exec UpdateVehicle'{vehicle.DriverName}',{vehicle.ContactNumber},'{vehicle.VehicleNumber}'");
+                var update = ($"exec UpdateVehicle'{vehicle.VehicleNumber}','{vehicle.DriverName}',{vehicle.ContactNumber}");
                 DAL.Open();
                 DAL.Execute(update);
                 DAL.Close();
